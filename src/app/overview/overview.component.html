@@ -1,0 +1,18 @@
+<mat-card class="overview-dialog">
+  <mat-card-header class="overview-dialog-header">
+    <mat-card-title class="overview-dialog-title">{{data.Name}}</mat-card-title>
+
+    <mat-card-actions class="overview-actions">
+      <button
+        class="btn-dialog-close"
+        mat-icon-button
+        aria-label="Close the overview details button"
+        mat-dialog-close
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card-header>
+
+  <mat-card-content class="overview-dialog-content">{{data.Description}}</mat-card-content>
+</mat-card>
