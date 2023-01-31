@@ -35,7 +35,6 @@ export class MovieCardComponent implements OnInit {
   getMovies(): void {
     this.fetchApiDataService.getAllMovies().subscribe((res: any) => {
       this.movies = res;
-      //console.log('getMovies():', this.movies);
       return this.movies;
     });
   }
@@ -71,7 +70,7 @@ export class MovieCardComponent implements OnInit {
    * Opens DirectorComponent as a dialog
    * @param name - name of the director
    * @param bio - bio of the director
-   * @param birth - birthyear of the director
+   * @param birth - birth year of the director
    */
   openDirectorDialog(name: string, bio: string, birth: string): void {
     this.dialog.open(DirectorComponent, {
@@ -98,11 +97,11 @@ export class MovieCardComponent implements OnInit {
   }
 
   /**
-   * Add/remove a movie into/from the favorite movies list
+   * Add/remove a movie to/from the favorite movies list
    *
    * @remarks
    * Check if the favoriteMovies variable contains the movieID, if no, make API call to add this ID into the
-   * user's FavoriteMovie property, if yes, make API call to delete this ID. Ater the API call,
+   * user's FavoriteMovie property, if yes, make API call to delete this ID. After the API call,
    * set the favoriteMovies variable to the updated FavoriteMovies property. Open snackBar to inform.
    *
    * @param id - movieID of the particular movie
@@ -119,7 +118,6 @@ export class MovieCardComponent implements OnInit {
         },
         (res) => {
           //Error response
-          //console.log('loginUser() response2:', res);
           this.snackBar.open(res.message, 'OK', {
             duration: 4000,
           });
@@ -135,7 +133,6 @@ export class MovieCardComponent implements OnInit {
         },
         (res) => {
           //Error response
-          //console.log('loginUser() response2:', res);
           this.snackBar.open(res.message, 'OK', {
             duration: 4000,
           });

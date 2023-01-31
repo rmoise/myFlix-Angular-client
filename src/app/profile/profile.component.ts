@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit{
 
   user: any={}
 
-  @Input() userUpdateData = { Username: '', Password: '', Email: '', Birthday: '' };//Decorator
+  @Input() userUpdateData = { Username: '', Password: '', Email: '', Birthday: '' };
 
   constructor(
     public fetchApiDataService: FetchApiDataService,
@@ -35,14 +35,13 @@ export class ProfileComponent implements OnInit{
         ...res,
         Birthday: new Date(res.Birthday).toLocaleDateString()
       };
-      //console.log('getUserInfo():', this.user);
       return this.user;
     })
   }
 
   /**
    * Log out the user
-   * 
+   *
    * @remarks
    * Make API call to delete the user, navigate of welcome-page and remove user info from localStorage
    */
@@ -64,7 +63,7 @@ export class ProfileComponent implements OnInit{
 
   /**
    * Update user info
-   * 
+   *
    * @remarks
    * Make API call to update the user, reset the localstorage and reload the profile-page
    */
@@ -78,7 +77,6 @@ export class ProfileComponent implements OnInit{
       window.location.reload();
     }, (response) => {
       //Error response
-      //console.log('onUserUpdate() response2:', response);
       this.snackBar.open(response.errors[0].msg, 'OK', {
         duration: 6000
       });

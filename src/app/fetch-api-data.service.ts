@@ -182,36 +182,3 @@ export class FetchApiDataService {
     return body || {};
   }
 }
-
-/*
-  //Get one specific movie
-  getOneMovie(Title: string): Observable<any> {
-    const token = localStorage.getItem('token');
-    return this.http
-      .get(`${apiUrl}movies/${Title}`, {
-        headers: new HttpHeaders(
-        {Authorization: 'Bearer ' + token})
-      })
-      .pipe(map(this.extractResponseData),catchError(this.handleError));
-  }
-
-  getDirector(Name: string): Observable<any> {
-    const token = localStorage.getItem('token');
-    return this.http
-      .get(`${apiUrl}movies/directors/${Name}`, {
-        headers: new HttpHeaders(
-        {Authorization: 'Bearer ' + token})
-      })
-      .pipe(map(this.extractResponseData),catchError(this.handleError));
-  }
-
-  getGenre(Name: string): Observable<any> {
-    const token = localStorage.getItem('token');
-    return this.http
-      .get(`${apiUrl}movies/genre/${Name}`, {
-        headers: new HttpHeaders(
-        {Authorization: 'Bearer ' + token})
-      })
-      .pipe(map(this.extractResponseData),catchError(this.handleError));
-  }
-  */

@@ -10,8 +10,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';//Display notification
 })
 
 export class UserRegistrationFormComponent implements OnInit {
-  
-  @Input() userData = { Username: '', Password: '', Email: '', Birthday: '' };//Decorator
+
+  @Input() userData = { Username: '', Password: '', Email: '', Birthday: '' };
 
   constructor(
     public fetchApiData: FetchApiDataService,
@@ -19,11 +19,11 @@ export class UserRegistrationFormComponent implements OnInit {
     public snackBar: MatSnackBar) { }
 
   ngOnInit(): void {} //OnInit method
-  
+
 
   /**
    * register a new user
-   * 
+   *
    * @remarks
    * Make API call to register the user, if success, open snackBar to inform and close the login dialog,
    * if fail, open snackBar to show error message
@@ -32,7 +32,6 @@ export class UserRegistrationFormComponent implements OnInit {
     this.fetchApiData.userRegistration(this.userData).subscribe((response) => {
   // Logic for a successful user registration goes here! (To be implemented)
      this.dialogRef.close(); // Close dialog on success
-     //console.log('registerUser() response1:', response);
      this.snackBar.open('Registered successfully!', 'OK', {
         duration: 4000
      });
