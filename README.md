@@ -49,7 +49,7 @@
 
 Using Angular, build the client-side for an application called myFlix based on its existing server-side code (REST API and database), with supporting documentation.
 
-[![myFlix Angular client screenshot][product-screenshot]](https://rmoise.github.io/myFlix-Angular-client/movies)
+[![myFlix Angular client screenshot][product-screenshot]](https://rmoise.github.io/myFlix-Angular-client/welcome)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
